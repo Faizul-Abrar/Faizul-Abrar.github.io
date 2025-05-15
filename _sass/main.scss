@@ -1,5 +1,5 @@
-$primary-color: #232523;
-$secondary-color: #e7a820;
+$primary-color: #000000c4;
+$secondary-color: #d3aa51;
 $font-stack: Helvetica, sans-serif;
 
 body,
@@ -11,7 +11,7 @@ p {
 
 body {
     font-family: $font-stack; line-height: 1.6;
-    background-color: #232523;
+    background-color: #000000c0;
     background-image: url(/assets/images/back.jpg);
             background-repeat: no-repeat;
             background-size: 1400px;
@@ -19,54 +19,77 @@ body {
 
 header {
     text-align: center; padding: 24px; color: #fff;
-    background-color: $primary-color;
+    backdrop-filter: blur(30px);
      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+     border-radius: 15px;
 }
 
 main {
     padding: 24px; margin-top: 24px;
     box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
     background-color: #e6e0e0;
+    border-radius: 15px;
 }
 
 footer {
     text-align: center; padding: 8px; margin-top: 24px; color: #fff;
-    background-color: $primary-color;
+    background-color: transparent;
      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+     border-radius: 15px;
 }
 
 h1 {
     color: #d8452b; margin-bottom: 8px;
      font-family: Georgia, 'Times New Roman', Times, serif;
+   
      
 }
 
 nav {
-    display: flex; 
-    background-color:#232523;
-    justify-content: center ;
-     box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-      font-family: Georgia, 'Times New Roman', Times, serif;
-    margin: 24px 0;
-    ul {
-        list-style-type: none; margin: 0; padding: 0; overflow: hidden;
-        background-color: $primary-color;
+  display: flex;
+  justify-content: center;
+  background-color: $primary-color;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 15px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  margin: 24px 0;
+
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: $primary-color;
+    border-radius: 15px;
+    display: flex;
+  }
+
+  li {
+    a {
+      display: block;
+      color: white;
+      text-align: center;
+      padding: 10px 20px;
+      text-decoration: none;
+      border-radius: 20px;
+      transition: background-color 0.3s;
+
+      &.active {
+        background-color: darken($secondary-color, 5%);
+        font-weight: bold;
+      }
+
+      &:hover:not(.active) {
+        background-color: $secondary-color;
+      }
     }
-    li {
-        float: left;
-        a {
-            display: block; color: white; text-align: center; padding: 8px 16px;
-            text-decoration: none;
-            &:hover:not(.active) {
-                background-color: $secondary-color;
-            }
-        }
-    }
+  }
 }
 
 .container {
     width: 80%; margin: auto; overflow: hidden;
      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+     border-radius: 15px;
 }
 
 .profile-picture {
@@ -79,6 +102,7 @@ nav {
     background-color: $secondary-color;
      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
       font-family: Georgia, 'Times New Roman', Times, serif;
+      border-radius: 15px;
 }
 
 .friends-container {
@@ -112,6 +136,6 @@ nav {
 }
 
 .friends-page a:hover {
-  background-color: #49357a;
+  background-color: #ceb46c;
   transform: scale(1.05);
 }
